@@ -9,8 +9,7 @@ $app = new Slim([
 	"templates.path" => dirname(__FILE__)."/templates"
 ]);
 
-$app->get("/:name", function ($name) {
-	global $app;
+$app->get("/:name", function ($name) use ($app) {
 	$app->render('home.jade', [
 		'name' => $name
 	]);
