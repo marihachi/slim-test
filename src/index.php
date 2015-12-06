@@ -11,8 +11,8 @@ $app = new Slim([
 
 $app->get("/:name", function ($name) {
 	global $app;
-	echo $app->view->fetch('home.jade', [
-		'name' => htmlspecialchars($name)
+	$app->render('home.jade', [
+		'name' => $name
 	]);
 });
 
