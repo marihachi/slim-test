@@ -1,5 +1,5 @@
 <?php
-require_once 'vendor/autoload.php';
+require_once "vendor/autoload.php";
 
 use Jlndk\SlimJade\Jade;
 use \Slim\Slim;
@@ -10,8 +10,8 @@ $app = new Slim([
 ]);
 
 $app->get("/:name", function ($name) use ($app) {
-	$app->render('home.jade', [
-		'name' => $name
+	$app->render("home.jade", [
+		"name" => $name
 	]);
 });
 
